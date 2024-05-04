@@ -97,3 +97,23 @@ code {
 .post_details-body {
   display: block;
 }
+.button-plus {
+  width: 120px;
+  font-size: 26px;
+  color: rgb(2, 2, 128);
+  border: 2px solid black;
+  margin-right: 16px;
+}
+
+.count {
+  display: block;
+  width: 80px;
+  margin-bottom: 16px;
+  margin-left: 50px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  font-size: 26px;
+  color: rgb(2, 2, 128);
+  border: 2px solid black;
+}

@@ -21,14 +21,25 @@ const postDetailsSlice = createSlice({
     setError: (state, action) => {
       state.error = action.payload;
     },
+    countValueCount: state => {
+      state.countValue = state.countValue = 0;
+    },
     incrementCountValue: state => {
       state.countValue = state.countValue + 1;
+    },
+    decrementCountValue: state => {
+      state.countValue = state.countValue - 1;
     },
   },
 });
 
-export const { setIsLoading, setPostDetails, setError, incrementCountValue } =
-  postDetailsSlice.actions;
+export const {
+  setIsLoading,
+  setPostDetails,
+  setError,
+  incrementCountValue,
+  decrementCountValue,
+} = postDetailsSlice.actions;
 
 export const postDetailsReducer = postDetailsSlice.reducer;
 

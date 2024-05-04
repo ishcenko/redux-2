@@ -11,6 +11,7 @@ import {
 } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import {
+  decrementCountValue,
   incrementCountValue,
   setError,
   setIsLoading,
@@ -70,8 +71,18 @@ const PostDetails = () => {
   return (
     <div>
       <h1>Post Details</h1>
-      <button onClick={() => dispatch(incrementCountValue())}>
-        Counter: {countValue}
+      <div className="count">{countValue}</div>
+      <button
+        className="button-plus"
+        onClick={() => dispatch(incrementCountValue())}
+      >
+        +
+      </button>
+      <button
+        className="button-plus"
+        onClick={() => dispatch(decrementCountValue())}
+      >
+        -
       </button>
       <Link to={backLinkHref.current}>Go back</Link>
       {error !== null && <p className="c-error"> Oops, error.</p>}
